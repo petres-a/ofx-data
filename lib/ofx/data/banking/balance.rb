@@ -8,7 +8,7 @@ module OFX
         attr_reader :amount, :date
 
         def initialize(opts)
-          @amount = BigDecimal.new(opts.fetch(:amount))
+          @amount = BigDecimal(opts.fetch(:amount))
           @date = opts.fetch(:date)
         end
 

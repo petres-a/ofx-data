@@ -7,7 +7,7 @@ module OFX::Data::Banking
     }
 
     it "returns its amount" do
-      expect(subject.amount).to eq(BigDecimal.new("100.00"))
+      expect(subject.amount).to eq(BigDecimal("100.00"))
     end
 
     it "returns its date" do

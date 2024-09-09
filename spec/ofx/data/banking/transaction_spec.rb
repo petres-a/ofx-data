@@ -38,7 +38,7 @@ module OFX::Data::Banking
     end
 
     it "returns the transaction amount" do
-      expect(subject.amount).to eq(BigDecimal.new("100"))
+      expect(subject.amount).to eq(BigDecimal("100"))
     end
 
     it "returns the fitid" do

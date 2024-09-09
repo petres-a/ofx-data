@@ -27,7 +27,7 @@ module OFX
           @type = opts.fetch(:type)
           raise ArgumentError, ":type must be one of #{VALID_TYPES.inspect}, was #{@type}" if !VALID_TYPES.include?(@type)
           @date_posted = opts.fetch(:date_posted)
-          @amount = BigDecimal.new(opts.fetch(:amount))
+          @amount = BigDecimal(opts.fetch(:amount))
           @fitid = opts.fetch(:fitid)
           @bank_account_to = opts.fetch(:bank_account_to, nil)
           @name = opts.fetch(:name, nil)
